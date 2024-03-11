@@ -1,33 +1,188 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.loaderContent {
+  width: 150px;
+  height: 150px;
+  margin-left: -75px;
+  margin-top: -75px;
+}
+.acento {
+  width: 20px;
+  height: 40px;
+  background-color: #fb8602;
+  position: absolute;
+  margin-left: -30px;
+  margin-top: 60px;
+  border-radius: 10px;
+  transform: rotate(45deg);
+}
+
+.navLink.active{
+  transition: 0.25s;
+  color: #fb8602!important;
+  font-weight: 600;
+}
+
+.ene {
+  transform: rotate(-180deg)!important;
+  margin-top: 45px;
+}
+
+.hoja {
+  width: 20px;
+  height: 40px;
+  margin-right: -5px;
+  margin-top: -70px;
+  background-color: #abbd71;
+  border-radius: 100%;
+  transform: rotate(40deg);
+  animation-name: loader;
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+}
+.manzanaDerecha {
+  width: 100px;
+  height: 120px;
+  background-color: #f6892e75;
+  border-radius: 100%;
+  transform: rotate(-40deg);
+  animation-name: loader;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.manzanaIzquierda {
+  width: 100px;
+  height: 120px;
+  background-color: #f6892e50;
+  border-radius: 100%;
+  transform: rotate(40deg);
+  margin-left: 25px;
+  animation-name: loader;
+  animation-duration: 1.5s;
+  animation-delay: 0.25s;
+  animation-iteration-count: infinite;
+}
+.manzana {
+  margin-left: -75px;
+  margin-top: 30px;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.circulo {
+  left: -500px;
+  bottom: -500px;
+}
+.ni-title {
+  font-size: 150px;
+  margin-top: -100px;
+}
+.header {
+  backdrop-filter: blur(15px);
+  background-color: #ffffff99;
+}
+.letraLogo {
+  position: relative;
+  left: 35px;
+  top: 25px;
+  color: #ffffff;
+  font-size: 55px;
+  font-weight: bolder;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #ffffff;
+  background: #b1bc7a;
+}
+
+::selection {
+  color: #ffffff;
+  background: #b1bc7a;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+.fade-out {
+  animation: fadeOut 1s ease-in;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.title {
+  font-family: "Cairo";
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+.frase {
+  background-image: url("/images/bgFrase.png");
+  background-size: cover;
+  background-position: center center;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-weight: bolder;
+  line-height: 120px;
+}
+.circular{
+  animation: rotate 20s linear infinite;
+    transform-origin: center center;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
