@@ -156,7 +156,7 @@ export default function Home() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.25 }}
-                className="relative z-20 min-h-screen flex flex-col items-center justify-center"
+                className="relative z-20 min-h-screen flex flex-col items-center justify-center p-4"
               >
                 <motion.div
                   initial={{ y: 50 }}
@@ -175,7 +175,7 @@ export default function Home() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.25 }}
-                  className="text-center text-[#363636] text-2xl font-bold font-monserrat"
+                  className="text-center text-[#6C6D6F] xs:text-lg md:text-2x font-bold font-monserrat mt-[-60px]"
                 >
                   Educando en alimentación saludable desde temprana edad
                 </motion.p>
@@ -186,7 +186,7 @@ export default function Home() {
                   >
                     <Image
                       src={"/images/google.png"}
-                      width={200}
+                      width={150}
                       height={50}
                       alt={"Nutricion infantil"}
                     />
@@ -197,7 +197,7 @@ export default function Home() {
                   >
                     <Image
                       src={"/images/appstore.png"}
-                      width={200}
+                      width={150}
                       height={50}
                       alt={"Nutricion infantil"}
                     />
@@ -207,18 +207,18 @@ export default function Home() {
                   initial={{ x: 200 }}
                   animate={{ x: 0 }}
                   transition={{ duration: 0.75 }}
-                  className="absolute bottom-0 right-[-200px]"
+                  className="absolute bottom-0 right-[-70px] sm:right-[-200px]"
                 >
                   <Image
                     src={"/images/iphone.png"}
-                    width={350}
-                    height={500}
+                    width={250}
+                    height={200}
                     alt={"Nutricion infantil"}
                   />
                 </motion.div>
               </motion.div>
             </Gradientdiv>
-            <div className="bg-[#EBE9E1] min-h-screen w-full ">
+            <div className="bg-[#F9F7F0] min-h-screen w-full ">
               <ScrollSection>
                 <Parallax speed={50} className=" mt-40">
                   <Image
@@ -399,7 +399,7 @@ export default function Home() {
             </div>
           </div>
           <div
-            className="bg-[#EBE9E1] pb-20 pt-10 min-h-screen w-full flex justify-center items-center"
+            className="bg-[#F9F7F0] pb-20 pt-10 min-h-screen w-full flex justify-center items-center"
             id="nosotros"
           >
             <Element name="nosotros" className="element">
@@ -503,21 +503,21 @@ export default function Home() {
                 <div className="w-full space-y-4">
                   <input
                     type="text"
-                    className="border border-[#B1BC7A] bg-[#EBE9E175] w-full p-4 rounded-xl focus:outline-[#FB8602]"
+                    className="border border-[#B1BC7A] bg-[#F9F7F0] w-full p-4 rounded-xl focus:outline-[#FB8602]"
                     placeholder="Nombre y Apellido"
                   />
                   <input
                     type="text"
-                    className="border border-[#B1BC7A] bg-[#EBE9E175] w-full p-4 rounded-xl focus:outline-[#FB8602]"
+                    className="border border-[#B1BC7A] bg-[#F9F7F0] w-full p-4 rounded-xl focus:outline-[#FB8602]"
                     placeholder="Teléfono"
                   />
                   <input
                     type="text"
-                    className="border border-[#B1BC7A] bg-[#EBE9E175] w-full p-4 rounded-xl focus:outline-[#FB8602]"
+                    className="border border-[#B1BC7A] bg-[#F9F7F0] w-full p-4 rounded-xl focus:outline-[#FB8602]"
                     placeholder="Email"
                   />
                   <textarea
-                    className="border border-[#B1BC7A] bg-[#EBE9E175] w-full p-4 h-40 rounded-xl focus:outline-[#FB8602]"
+                    className="border border-[#B1BC7A] bg-[#F9F7F0] w-full p-4 h-40 rounded-xl focus:outline-[#FB8602]"
                     placeholder="Mensaje"
                   ></textarea>
                   <button className="bg-[#FB8602] p-2 pl-20 pr-20 rounded-lg text-white mt-8">

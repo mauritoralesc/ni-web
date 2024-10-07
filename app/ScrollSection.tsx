@@ -28,7 +28,7 @@ const ScrollSection: React.FC<ScrollSectionProps> = ({ children }) => {
 
   return (
     <div
-      className="flex container mx-auto justify-center space-x-8 items-center min-h-screen"
+      className="flex flex-col sm:flex-row container mx-auto justify-center space-x-8 items-center min-h-screen"
       ref={sectionRef}
     >
       {children}
